@@ -8,7 +8,7 @@ echo "###########################
 echo -n "შეიყვანე ნომერი=> "
 read number
 parse(){
-curl 'https://simpleapi.info/apps/numbers-info/info.php' -H 'Host: simpleapi.info' -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0' -H 'Accept: application/json, text/javascript, */*; q=0.01' -H 'Accept-Language: en-US,en;q=0.5' --compressed -H 'Referer: http://simpleapi.info/apps/numbers-info/web/index.php' -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' -H 'Origin: http://simpleapi.info' -H 'Connection: keep-alive' -H 'Pragma: no-cache' -H 'Cache-Control: no-cache' --data "number=$number" -s | sed 's/{//g;s/}//g;s/"//g;s/yes//g;s/res//g;s/://g;s/info//g;s/name//g;s/,//g;s/image//g;s/noerr#006/[-] ვერ მოიძებნა/g'
+curl 'https://simpleapi.info/apps/numbers-info/info.php' -H 'Host: simpleapi.info' -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0' -H 'Accept: application/json, text/javascript, */*; q=0.01' -H 'Accept-Language: en-US,en;q=0.5' --compressed -H 'Referer: http://simpleapi.info/apps/numbers-info/web/index.php' -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' -H 'Origin: http://simpleapi.info' -H 'Connection: keep-alive' -H 'Pragma: no-cache' -H 'Cache-Control: no-cache' --data "number=$number" -s | sed 's/{//g;s/}//g;s/"//g;s/yes//g;s/res//g;s/://g;s/info//g;s/name//g;s/,//g;s/image//g;s/noerr#006/[-] ვერ მოიძებნა/g;s/noerr#004/[X] შეიყვანე ნომერი!/g'
 }
 if parse; then
 echo ""
