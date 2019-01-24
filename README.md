@@ -1,4 +1,5 @@
-# Nomrebi.com
-nomrebi.com  parser
+# Nomrebi.com parser
+
 chmod +x parser
+
 ./parser
